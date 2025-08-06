@@ -1,0 +1,146 @@
+/* Base Styles */
+:root {
+  --primary-color: #3498db;
+  --secondary-color: #2c3e50;
+  --accent-color: #e74c3c;
+  --light-color: #ecf0f1;
+  --dark-color: #2c3e50;
+  --text-color: #333;
+  --text-light: #7f8c8d;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: #f9f9f9;
+  padding-top: 56px; /* For fixed navbar */
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Georgia', serif;
+  color: var(--dark-color);
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--accent-color);
+}
+
+/* Navigation */
+.navbar {
+  background-color: var(--secondary-color) !important;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.nav-link {
+  font-weight: 500;
+}
+
+/* Blog Posts */
+article {
+  background: white;
+  border-radius: 8px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+article:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.post-title {
+  margin-bottom: 1rem;
+}
+
+.post-title a {
+  color: var(--dark-color);
+}
+
+.post-meta {
+  color: var(--text-light);
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.post-content {
+  margin-top: 1rem;
+}
+
+/* Forms */
+.form-control {
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  padding: 0.75rem;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  padding: 0.5rem 1.5rem;
+  border-radius: 4px;
+}
+
+.btn-primary:hover {
+  background-color: #2980b9;
+  border-color: #2980b9;
+}
+
+/* Post Detail Page */
+.post-detail {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.post-detail .post-title {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.post-detail .post-content {
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+/* Utility Classes */
+.container {
+  max-width: 1140px;
+  padding: 0 20px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mt-5 {
+  margin-top: 3rem;
+}
+
+.mb-4 {
+  margin-bottom: 1.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .post-detail .post-title {
+    font-size: 2rem;
+  }
+  
+  article {
+    padding: 1.5rem;
+  }
+}
